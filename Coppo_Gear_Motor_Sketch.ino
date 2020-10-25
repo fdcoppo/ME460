@@ -16,15 +16,15 @@ void setup() {
 volatile long int pulses = 0; //variable in RAM memory for fast task memory allocation
                               //the motor does 374 pulses per revolution
 
-int v_motor = 420;                //set motor voltage
+int v_motor = 250;                //set motor voltage
 double current_rpm = 0;
 int target = getRpm(35);
 int k = 1;
 
 void loop() {
   
-  if (v_motor > 450)
-    v_motor = 450;
+  if (v_motor > 255)
+    v_motor = 255;
   else if (v_motor < 0)
     v_motor = 0;
   
